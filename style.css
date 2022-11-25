@@ -1,0 +1,296 @@
+html {
+  font-size: 20px;
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+}
+body {
+  background-color: aquamarine;
+  margin: 0;
+}
+.btn1 {
+  font-size: 0.8rem;
+  padding: 0.3em 0.8em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #58a linear-gradient(hsla(0, 0%, 100%, 0.2), transparent);
+  /* gradient od koloru projektowego do ciemniejszego od niego */
+  border-radius: 0.2em;
+  box-shadow: 0 0.05em 0.25em rgba(0, 0, 0, 0.5);
+  /* transparentność w jasność */
+  color: white;
+  text-shadow: 0 -0.05em 0.05em rgba(0, 0, 0, 0.5);
+  line-height: 1.5;
+}
+.wrapper {
+  padding: 10px;
+  display: flex;
+}
+.btn2 {
+  font-size: 2rem;
+}
+.btn3 {
+  background-color: rgb(12, 112, 3);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn4 {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: rgb(162, 10, 10);
+}
+hr {
+  height: 2px;
+  border-width: 0;
+  color: gray;
+  background-color: gray;
+}
+.div2 {
+  background-color: wheat;
+  width: 50%;
+  padding: 0.5em;
+  border: 15px solid hsla(0, 0%, 100%, 0.5);
+  /* przezroczysta ramka */
+  background: white;
+  background-clip: padding-box;
+}
+
+.div3 {
+  background: yellow;
+  width: 150px;
+  height: 100px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 0 0 10px #655 inset, 0 0 0 15px deeppink inset,
+    0 2px 5px 2px rgba(0, 0, 0, 0.6) inset;
+  /* wielokrotne ramki, inset żeby pojawyły się do wnetrza */
+}
+
+.div4 {
+  display: inline-block;
+  width: 40%;
+  height: 250px;
+  background: repeating-linear-gradient(45deg, #fb3 0 15px, #58a 0 30px);
+}
+.div5 {
+  display: inline-block;
+  width: 40%;
+  height: 250px;
+
+  background: repeating-linear-gradient(
+    30deg,
+    hsla(0, 0%, 100%, 0.1),
+    hsla(0, 0%, 100%, 0.1) 15px,
+    transparent 0,
+    transparent 30px
+  );
+  background-color: #fb3;
+}
+.div6 {
+  display: inline-block;
+  width: 40%;
+  height: 250px;
+  padding: 1em;
+  border: 1em solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    repeating-linear-gradient(
+        -45deg,
+        red 0,
+        red 12.5%,
+        transparent 0,
+        transparent 25%,
+        #58a 0,
+        #58a 37.5%,
+        transparent 0,
+        transparent 50%
+      )
+      0 /5em 5em;
+}
+@keyframes ants {
+  to {
+    background-position: 135%;
+    /* wartosc specyficzna tylko dla tego przypadku, zeby animacja konczyla sie w podobnym miejscu co zaczyna i zniwelowac przeskok */
+  }
+}
+.div7 {
+  display: inline-block;
+  width: 40%;
+  height: 250px;
+  padding: 1em;
+  border: 1px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    repeating-linear-gradient(
+        -45deg,
+        red 0,
+        red 12.5%,
+        transparent 0,
+        transparent 25%,
+        black 0,
+        black 37.5%,
+        transparent 0,
+        transparent 50%
+      )
+      0 /5em 5em;
+  animation: ants 4s linear infinite;
+}
+
+.div8 {
+  font-size: 1.5rem;
+  border-top: 0.1em solid transparent;
+  border-image: 100% 0 0 linear-gradient(90deg, currentColor 3em, transparent 0);
+  padding-top: 0.1em;
+  padding-left: 0.2em;
+}
+
+.div9 {
+  /* eliptyczne narożniki */
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  display: inline-block;
+  margin-right: 25px;
+  border-radius: 40px/10px;
+}
+.div9--1 {
+  width: 200px;
+  height: 100px;
+  background-color: blueviolet;
+  display: inline-block;
+  border-radius: 100px/50px;
+}
+
+.div9--2 {
+  width: 30%;
+  height: 100px;
+  background-color: blueviolet;
+  display: inline-block;
+  border-radius: 50%/50%;
+}
+.div10 {
+  position: relative;
+}
+.div10::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #58a;
+  z-index: -1;
+  transform: skew(45deg);
+}
+.div11 {
+  background: rgb(33, 132, 193);
+  width: 150px;
+  padding: 15px;
+  display: inline-block;
+  background: radial-gradient(circle at top left, transparent 15px, #3ac 0) top
+      left,
+    radial-gradient(circle at top right, transparent 15px, #3ac 0) top right,
+    radial-gradient(circle at bottom right, transparent 15px, #3ac 0) bottom
+      right,
+    radial-gradient(circle at bottom left, transparent 15px, #3ac 0) bottom left;
+  background-size: 50% 51%;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.div12 {
+  background: rgb(33, 132, 193);
+  width: 150px;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: -16px 0px 12px -9px rgba(66, 68, 90, 1),
+    16px 0px 12px -9px rgba(66, 68, 90, 1);
+  /* cien z obu przeciwleglych stron- trzeba zastosowac dwa pojedyncze cienie */
+}
+.div13 {
+  background: inherit;
+  width: 150px;
+
+  padding: 15px;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border: 10px dotted blueviolet;
+  border-radius: 2px;
+  filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.5));
+  text-shadow: 0;
+}
+.div14 {
+  display: inline-block;
+  position: relative;
+  clip-path: ellipse(25% 43% at 40% 45%);
+  background-color: coral;
+  transition: clip-path 2s;
+}
+.image {
+  background-color: #655;
+  display: block;
+  width: 400px;
+  position: relative;
+  clip-path: ellipse(20% 40% at 40% 45%);
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.9));
+  transition: clip-path 2s, filter 3s;
+  filter: sepia() saturate(5) hue-rotate(90deg);
+}
+.image:hover {
+  clip-path: ellipse(30% 40% at 40% 45%);
+  filter: none;
+}
+.div14:hover {
+  clip-path: ellipse(35% 42% at 40% 45%);
+}
+.div14:hover .div14::before {
+  background: black;
+  clip-path: ellipse(50% 43% at 40% 45%);
+}
+
+.div15 {
+  height: 200px;
+  width: 200px;
+  background: blueviolet;
+  clip-path: ellipse(33% 43% at 40% 45%);
+  transition: clip-path 2s;
+  display: inline-block;
+}
+.div15 div {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://images.unsplash.com/photo-1669170023257-4da4bc7adfbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+  background-repeat: no-repeat;
+  background-position: 59% 32%;
+  clip-path: ellipse(30% 40% at 40% 45%);
+  transition: clip-path 2s;
+}
+.div15:hover {
+  clip-path: ellipse(40% 55% at 40% 45%);
+}
+.div15:hover div {
+  clip-path: ellipse(35% 45% at 40% 45%);
+}
+.div16 {
+  width: 75px;
+  height: 100px;
+  display: inline-block;
+  background: #58a;
+  background-image: url(https://images.unsplash.com/photo-1669082072817-ac4fcd700648?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+  background-size: 150px;
+  border-radius: 50%/50%;
+  border: 5px solid #3ac;
+  background-repeat: no-repeat;
+  background-position: 55% 32%;
+  transition: all 2s;
+  transition-property: width, height, filter;
+  filter: sepia() saturate(5) hue-rotate(170deg);
+}
+.div16:hover {
+  width: 150px;
+  height: 200px;
+  filter: none;
+}
